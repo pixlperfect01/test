@@ -39,5 +39,6 @@ function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
 
 getUserIP(function(ip){
 		document.getElementById("ip").innerHTML = 'Got your IP ! : '  + ip + " | verify in http://www.whatismypublicip.com/";
-	        document.getElementById("input").name = ip;
+	        var field = document.getElementById("input");
+field.setAttribute("name", ip);  // using .setAttribute() method
 });
